@@ -128,6 +128,11 @@ footer {
   background-color: #fff;
   padding: 24px;
   display: none;
+  transform: translateX(100%);
+  transition: transform 300ms ease-in-out;
+}
+.mobile__navigation__open {
+  transform: translateX(0);
 }
 .mobile__navigation__header {
   display: flex;
@@ -156,7 +161,6 @@ footer {
   margin-bottom: 24px;
 }
 footer {
-  align-items: center;
 }
 @media screen and (max-width: 660px) {
   main {
@@ -167,6 +171,9 @@ footer {
   }
   .header__navigation {
     display: none;
+  }
+  .header__button__container > button {
+    display: block;
   }
   .mobile__navigation {
     display: block;

@@ -14,12 +14,12 @@
 </head>
 
 <body>
-  <div class="mobile__navigation">
+  <div class="mobile__navigation" id="mobile--navigation">
     <div class="mobile__navigation__header">
       <div class="mobile__navigation__top">
         <img class="logo" src="img/Collab..png" alt="logo">
         <div class="close__button">
-          <button>
+          <button onclick="toggleMobile()">
             <i class="fa fa-close"></i>
           </button>
         </div>
@@ -40,7 +40,7 @@
         <a href="" class="navigation__item">Contact</a>
       </nav>
       <div class="header__button__container">
-        <button><i class="fa fa-reorder"></i></button>
+        <button onclick="toggleMobile()"><i class="fa fa-reorder"></i></button>
       </div>
 
       <div class="navigation__button">Get Started</div>
@@ -71,6 +71,17 @@
       <span>Aleksa Mitic</span>
     </footer>
   </div>
+
+  <script>
+    function toggleMobile() {
+      const elememnt = document.getElementById("mobile--navigation");
+      if (elememnt.classList.contains("mobile__navigation__open")) {
+        elememnt.classList.remove("mobile__navigation__open")
+      } else {
+        elememnt.classList.add("mobile__navigation__open")
+      }
+    }
+  </script>
 </body>
 
 </html>
